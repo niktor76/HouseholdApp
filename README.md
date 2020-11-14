@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Lumen PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
@@ -22,3 +23,12 @@ If you discover a security vulnerability within Lumen, please send an e-mail to 
 ## License
 
 The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+=======
+# HouseholdApp
+
+## Backend
+Wird in Laravel umgesetzt.
+
+## Frontend
+Android-App und ein Webinterface.
+>>>>>>> b0ceb9c82a565ea5076dba65436aa989ed268ab9
