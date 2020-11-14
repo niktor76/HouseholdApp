@@ -2,7 +2,7 @@
 
 /*
 |--------------------------------------------------------------------------
-| Create The Application
+| Create The Application!
 |--------------------------------------------------------------------------
 |
 | First we need to get an application instance. This creates an instance
