@@ -16,7 +16,41 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+//
+//$router->get('info', function () {
+//    return 'Hello World';
+//});
+$router->group(['prefix' => 'api/v1'], function () use ($router) {
 
-$router->get('info', function () {
-    return 'Hello World';
+//    $router->get('lists', 'ListController@index');
+//    $router->get('list/{id}', 'ListController@show');
+
+    $router->get('family-members', 'FamilyMemberController@index');
+    $router->get('family-member/{id}', 'FamilyMemberController@show');
 });
+
+//$router->group(['prefix' => 'api/v1'], function () use ($router) {
+//
+//    $router->get('/items', 'ProductController@index');
+//    $router->post('/items', 'ProductController@create');
+//    $router->get('/items/{id}', 'ProductController@show');
+//    $router->put('/items/{id}', 'ProductController@update');
+//    $router->delete('/items/{id}', 'ProductController@destroy');
+//
+//});
+//
+//GET
+//
+///lists/
+//
+///list/{id}
+//
+///members/
+//
+///grocery/{id}
+//
+//
+//
+//POST
+//
+///list/{id}/add/{ean}
