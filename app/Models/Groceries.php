@@ -6,7 +6,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 class Groceries extends Model {
-    protected $table = 'family_members';
+    protected $table = 'groceries';
     /**
      * The attributes that are mass assignable.
      *
