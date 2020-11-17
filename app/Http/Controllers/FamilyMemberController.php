@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\FamilyMember;
+use App\Models\Groceries;
 use Illuminate\Http\Request;
 
 class FamilyMemberController extends Controller {
@@ -16,17 +16,17 @@ class FamilyMemberController extends Controller {
     }
 
     public function index() {
-        $familyMembers = FamilyMember::all();
+        $familyMembers = Groceries::all();
         return response()->json($familyMembers);
     }
 
     public function show($id) {
-        $familyMember = FamilyMember::find($id);
+        $familyMember = Groceries::find($id);
         return response()->json($familyMember);
     }
 
     public function create(Request $request) {
-        $familyMember = new FamilyMember();
+        $familyMember = new Groceries();
         $familyMember->first_name = $request->first_name;
         $familyMember->price = $request->price;
         $familyMember->description = $request->description;
@@ -36,7 +36,7 @@ class FamilyMemberController extends Controller {
     }
 
     public function update(Request $request, $id) {
-        $product = FamilyMember::find($id);
+        $product = Groceries::find($id);
 
         $product->name = $request->input('name');
         $product->price = $request->input('price');
@@ -46,7 +46,7 @@ class FamilyMemberController extends Controller {
     }
 
     public function destroy($id) {
-        $product = FamilyMember::find($id);
+        $product = Groceries::find($id);
         $product->delete();
         return response()->json('product removed successfully');
     }

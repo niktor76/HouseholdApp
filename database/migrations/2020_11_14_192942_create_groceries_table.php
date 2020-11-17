@@ -15,7 +15,8 @@ class CreateGroceriesTable extends Migration {
             $table->id();
             $table->string('ean', 32);
             $table->string('name', 64);
-            $table->foreignId('category_id')->constrained('categories');
+            $table->string('category');
+            $table->integer('price');
             $table->timestamps();
         });
     }
