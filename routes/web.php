@@ -14,20 +14,19 @@
 */
 
 $router->get('/', 'GroceriesController@index');
-//
-//$router->get('info', function () {
-//    return 'Hello World';
-//});
+
+
+
 $router->group(['prefix' => 'api/v1'], function () use ($router) {
-
-//    $router->get('lists', 'ListController@index');
-//    $router->get('list/{id}', 'ListController@show');
-
     $router->get('family-members', 'FamilyMemberController@index');
     $router->get('family-member/{id}', 'FamilyMemberController@show');
     $router->get('groceries', 'GroceriesController@index');
     $router->get('grocery/{id}', 'GroceriesController@show');
+
+
 });
+
+
 
 //$router->group(['prefix' => 'api/v1'], function () use ($router) {
 //
