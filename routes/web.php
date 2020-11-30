@@ -13,7 +13,7 @@
 |
 */
 
-$router->get('/', 'GroceriesController@index');
+$router->get('/', 'FamilyMembersController@index');
 
 
 
@@ -22,7 +22,8 @@ $router->group(['prefix' => 'api/v1'], function () use ($router) {
     $router->get('family-member/{id}', 'FamilyMemberController@show');
     $router->get('groceries', 'GroceriesController@index');
     $router->get('grocery/{id}', 'GroceriesController@show');
-
+    $router->get('shopping-lists', 'ShoppingListController@index');
+    $router->get('shopping-list/{id}', 'ShoppingListController@show');
 
 });
 

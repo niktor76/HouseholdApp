@@ -4,15 +4,13 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateShoppingListGroceriesTable extends Migration
-{
+class CreateShoppingListGroceriesTable extends Migration {
     /**
      * Run the migrations.
      *
      * @return void
      */
-    public function up()
-    {
+    public function up() {
         Schema::create('shopping_list_groceries', function (Blueprint $table) {
             $table->id();
             $table->foreignId('shopping_list_id')->constrained('shopping_lists');
@@ -23,24 +21,13 @@ class CreateShoppingListGroceriesTable extends Migration
             $table->timestamps();
         });
     }
-//id
-//
-//list_id
-//
-//article_nr
-//
-//amount
-//
-//added_from
-//
-//Checked : boolean
+
     /**
      * Reverse the migrations.
      *
      * @return void
      */
-    public function down()
-    {
+    public function down() {
         Schema::dropIfExists('shopping_list_groceries');
     }
 }
